@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Editar Música</h1>
+
+<%= form_with model: @song do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Título' %>
+    <%= form.text_field :name, value: @song.name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_explicit, 'Música Explicíta?' %>
+    <%= form.check_box :is_explicit, value: @song.is_explicit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :album_id, 'Álbum' %>
+    <%= form.collection_select :album_id, @albums, :id, :name, value: @song.album.name %>
+
+  </div>
+
+  <div class="field">
+    <%= form.label :genre_id, 'Gênero' %>
+    <%= form.collection_select :genre_id, @genres, :id, :descriptor, value: @song.genre.descriptor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Editar Música" %>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar para Página do Álbum', album_path(@song.album) %> |
+<%= link_to 'Voltar para Todas as Músicas', songs_path %>

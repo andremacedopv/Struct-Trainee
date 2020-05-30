@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nova Música</h1>
+
+<%= form_with model: @song do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Título' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_explicit, 'Música Explicíta?' %>
+    <%= form.check_box :is_explicit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :album_id, 'Álbum' %>
+    <% if params.has_key?(:album_id) %>
+      <%= form.collection_select :album_id, @albums,:id,:name %>
+    <% else %>
+      <%= form.collection_select :album_id, @albums, :id, :name, include_blank: true %>
+    <% end %>
+
+  </div>
+
+  <div class="field">
+    <%= form.label :genre_id, 'Gênero' %>
+    <%= form.collection_select :genre_id, @genres, :id, :descriptor, include_blank: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Criar Música" %>
+  </div>
+<% end %>
+
+<% if params.has_key?(:album_id) %>
+  <%= link_to 'Voltar para Página do Álbum', album_path(@albums.first) %> |
+<% end %>
+<%= link_to 'Voltar para Todas as Músicas', songs_path %>
