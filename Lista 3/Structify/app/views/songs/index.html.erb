@@ -1,3 +1,9 @@
+<div class="topnav">
+  <%= link_to 'Home', root_path %>
+  <%= link_to 'Álbums', albums_path %>
+  <%= link_to 'Músicas', songs_path,  :class => "active" %>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Músicas Disponíveis</h1>
@@ -9,7 +15,7 @@
     <th>Explicíta</th>
     <th>Gênero</th>
     <th>Álbum</th>
-    <th colspan="4"></th>
+    <th colspan="7"></th>
   </tr>
   </thead>
 
@@ -30,5 +36,4 @@
 
 <br>
 
-<%= link_to 'Nova Múscia', new_song_path %> |
-<%= link_to 'Homepage', root_path %>
+<%= link_to 'Nova Múscia', new_song_path,  :class => "button-1" %>

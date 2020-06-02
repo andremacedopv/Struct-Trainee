@@ -1,6 +1,11 @@
+<div class="topnav">
+  <%= link_to 'Home', root_path, :class => "active" %>
+  <%= link_to 'Álbums', albums_path %>
+  <%= link_to 'Músicas', songs_path %>
+</div>
+
 <h1> STRUCTIFY </h1>
 
 <h2><%= @welcome_text %></h2>
 
-<td><%= link_to 'Álbums', albums_path %></td> |
-<td><%= link_to 'Músicas', songs_path %></td>
+<p>Utilize a barra no topo para navegação.</p>
