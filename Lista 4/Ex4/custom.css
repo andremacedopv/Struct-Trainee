@@ -38,17 +38,12 @@ body, html {
 
 .top-grid {
     color: rgba(255, 255, 255, 0.87);
+    margin: 0px;
     font-size: 26px;
 }
 
 .bottom-grid {
     color: rgba(255, 255, 255, 0.651);
+    margin: 0px;
     font-size: 14px;
-}
-
-.padding-0{
-    padding-right:0;
-    padding-left:0;
-    margin-left: 0;
-    margin-right: 0;
 }
