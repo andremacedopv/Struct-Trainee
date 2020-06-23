@@ -1,0 +1,262 @@
+  [1m[35m (728.8ms)[0m  [1m[35mCREATE DATABASE "covidData_development" ENCODING = 'unicode'[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (620.2ms)[0m  [1m[35mCREATE DATABASE "covidData_test" ENCODING = 'unicode'[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (150.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (116.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1793345507055926460)[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-22 22:49:28.597419"], ["updated_at", "2020-06-22 22:49:28.597419"]]
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1793345507055926460)[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/andre/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:47:22 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (160.8ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "chart.js" is not present in the asset pipeline.):
+    1: <%= javascript_include_tag 'chart' %>
+    2: 
+    3: <canvas id="countryChart" width="400" height="400"></canvas>
+  
+app/views/application/homepage.html.erb:1:in `_app_views_application_homepage_html_erb__2095189748899964453_16480'
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:47:33 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (5101.1ms)
+Completed 200 OK in 5302ms (Views: 5300.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:48:17 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:48:45 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 126ms (Views: 124.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:48:51 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:49:50 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:51:51 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:52:49 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:53:05 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 91ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:54:17 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:55:28 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:58:54 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 20:59:55 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:00:57 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:01:25 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:01:52 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:02:48 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:03:18 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:12:03 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:12:17 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:12:25 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:20:02 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 94ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:40:59 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 21:41:15 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:25:57 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (470.9ms)
+Completed 200 OK in 682ms (Views: 660.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:31:29 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 376ms (Views: 374.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:32:00 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:32:05 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 82ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:32:18 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:32:24 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:32:53 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:33:17 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-22 22:33:44 -0300
+Processing by ApplicationController#homepage as HTML
+  Rendering application/homepage.html.erb within layouts/application
+  Rendered application/homepage.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+

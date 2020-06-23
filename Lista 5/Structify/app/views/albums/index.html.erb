@@ -1,0 +1,38 @@
+<div class="topnav">
+  <%= link_to 'Home', root_path %>
+  <%= link_to 'Álbums', albums_path, :class => "active" %>
+  <%= link_to 'Músicas', songs_path %>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Álbuns Disponíveis</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Título</th>
+    <th>Artista</th>
+    <th colspan="8"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @albums.each do |album| %>
+    <tr id=<%= album.id %> >
+      <td><%= album.name %></td>
+      <td><%= album.artist %></td>
+      <td><button type="button" class="btn btn-outline-success listened" id=<%= "alb_#{album.id.to_s}_lst" %> ><i class="fa fa-check-square"></i></button></td>
+      <td><button type="button" class="btn btn-outline-danger not_listened" id=<%= "alb_#{album.id.to_s}_not" %> ><i class="fa fa-minus-square"></i></button></td>
+      <td><button type="button" class="btn btn-outline-dark clear_listened" id=<%= "alb_#{album.id.to_s}_clear" %> ><i class="fa fa-square"></i></button></td>
+      <td><%= link_to 'Detalhes', album_path(album) %></td>
+      <td><%= link_to 'Editar', edit_album_path(album) %></td>
+      <td><%= link_to 'Deletar', album_path(album), method: :delete, data: { confirm: 'Você tem certeza? Todas as músicas do álbum serão deletadas.' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Álbum', new_album_path, :class => "button-1" %>

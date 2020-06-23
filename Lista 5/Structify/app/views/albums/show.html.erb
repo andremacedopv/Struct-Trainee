@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detalhes do Álbum</h1>
+
+<p>
+  <strong>Título:</strong>
+  <%= @album.name %>
+</p>
+
+<p>
+  <strong>Artista:</strong>
+  <%= @album.artist %>
+</p>
+
+<p>
+  <strong>Adicionado em:</strong>
+  <%= @album.created_at %>
+</p>
+
+<h2>Músicas no Álbum</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>Título</th>
+    <th>Explicíta</th>
+    <th>Gênero</th>
+    <th colspan="4"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @album.songs.each do |song| %>
+    <tr>
+      <td><%= song.name %></td>
+      <td><%= human_boolean(song.is_explicit) %></td>
+      <td><%= song.genre.descriptor %></td>
+      <td><%= link_to 'Detalhes', song_path(song) %></td>
+      <td><%= link_to 'Editar', edit_song_path(song) %></td>
+      <td><%= link_to 'Deletar', song_path(song), method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Editar Álbum', edit_album_path(@album) %> |
+<%= link_to 'Adicionar Música', new_song_path(:album_id => @album.id) %> |
+<%= link_to 'Deletar Álbum', album_path(@album), method: :delete, data: { confirm: 'Você tem certeza? Todas as músicas do álbum serão deletadas.' } %> |
+<%= link_to 'Voltar aos Álbuns', albums_path %>

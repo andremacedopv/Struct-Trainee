@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detalhes da Música</h1>
+
+<p>
+  <strong>Título:</strong>
+  <%= @song.name %>
+</p>
+
+<p>
+  <strong>Explícita:</strong>
+  <%= human_boolean(@song.is_explicit) %>
+</p>
+
+<p>
+  <strong>Gênero:</strong>
+  <%= @song.genre.descriptor %>
+</p>
+
+<p>
+  <strong>Álbum:</strong>
+  <%= @song.album.name %>
+</p>
+
+<p>
+  <strong>Artista:</strong>
+  <%= @song.album.artist %>
+</p>
+
+<p>
+  <strong>Adicionado em:</strong>
+  <%= @song.created_at %>
+</p>
+
+<%= link_to 'Editar', edit_song_path(@song) %> |
+<%= link_to 'Deletar', song_path(@song), method: :delete, data: { confirm: 'Você tem certeza?' } %> |
+<%= link_to 'Ir Para o Álbum', album_path(@song.album) %> |
+<%= link_to 'Ir Para Todas as Músicas', songs_path %>
