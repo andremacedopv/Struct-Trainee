@@ -1,4 +1,4 @@
 # Observações:
-* Foi utilizado a versão `2.7.1` dio ruby e `6.0.3.1` do rails.
-* O arquivo `seeds.rb` foi populado, além dos gêneros musicais conforme pedido, também com músicas e álbums pré-definidos.
-* Foi optado por permitir inclusão de novas músicas tanto da página `show` do álbum quanto na página de visualização de todas as músicas.
+* No exercicio de dar like numa musica, eu não consegui terminar a tempo. Foquei nele esse final de semana e hoje, mas mesmo assim surgiram diversos problemas que eu não conseguia corrigir, mesmo mexendo até o último minuto.
+* O restante do código eu consegui fazer, embora como tenha gastado muito tempo no item anterior, acabei não tendo tempo de deixar a apresentação dele da forma que eu queria.
+* Só pra deixar avisado também, que, embora tenha enviado o projeto a tempo no classroom, o meu ubuntu bugou na hora de enviar pro git, o que me fez ter que reiniciar o PC e upar para o git com alguns minutos de atraso. Esse readme mesmo só estou upando depois.
